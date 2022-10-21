@@ -75,3 +75,22 @@ body {
     font-size: 5rem;
     padding: 20px 0;
 }
+
+.outer-circle {
+    width: 400px;
+    height: 400px;
+    background-color: rgba(23, 23, 23, 1);
+    color: #fff;
+    border-radius: 50%;
+    box-shadow: 1px 1px 12px 0px rgba(0,0,0,1) inset, -1px -1px 12px 0px rgb(49, 49, 49) inset;
+}
+
+.inner-circle {
+    width: 200px;
+    height: 200px;
+    background-color: rgba(23, 23, 23, 1);
+    color: #fff;
+    border-radius: 500px;
+    box-shadow: 1px 1px 5px 0px rgba(0,0,0,1),
+-1px -1px 6px 0px rgba(60,60,60,1);
+}
