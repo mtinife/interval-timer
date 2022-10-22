@@ -2,7 +2,7 @@
     --bg-dark: #0D0D0D;
     --bg-light: #171717;
     --text: #707070;
-
+    --gradient-circle: linear-gradient(90deg, rgba(253,29,29,1) 50%, rgba(252,107,69,1) 100%);
     --text-font: 'Lato', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
@@ -76,21 +76,71 @@ body {
     padding: 20px 0;
 }
 
+.round-start {
+    display: grid;
+    grid-template-rows: 0.1fr 1fr 0.1fr;
+}
+
+.progress-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-content: center;
+    padding: 38px 0;
+}
+
 .outer-circle {
-    width: 400px;
-    height: 400px;
+    grid-area: 1 / 1 / 2 / 2;
+    width: 380px;
+    height: 380px;
     background-color: rgba(23, 23, 23, 1);
     color: #fff;
     border-radius: 50%;
     box-shadow: 1px 1px 12px 0px rgba(0,0,0,1) inset, -1px -1px 12px 0px rgb(49, 49, 49) inset;
 }
 
-.inner-circle {
+.progress-circle {
+    grid-area: 1 / 1 / 2 / 2;
+    border-radius: 8px;
+    row-gap: 30px;
+}
+
+.circular-progress {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: conic-gradient(#FF004E 3.6deg, #ededed 0deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.circular-progress::before {
+    content: "";
+    position: absolute;
+    height: 260px;
+    width: 260px;
+    border-radius: 50%;
+    background-color: var(--bg-light);
+}
+
+.circular-progress::after {
+    content: "";
+    position: absolute;
     width: 200px;
     height: 200px;
     background-color: rgba(23, 23, 23, 1);
-    color: #fff;
     border-radius: 500px;
     box-shadow: 1px 1px 5px 0px rgba(0,0,0,1),
 -1px -1px 6px 0px rgba(60,60,60,1);
+}
+
+.timer {
+    position: relative;
+    z-index: 10;
+    font-size: 3rem;
+
 }
